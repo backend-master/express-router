@@ -2,8 +2,12 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/", (req, res) => {
+  // Using query parameter
+  const qs = req.query;
+  console.log(qs);
   res.status(200).json({
-    message: "hello world !"
+    message: "hello world !",
+    query: qs
   });
 });
 
